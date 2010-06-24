@@ -12,9 +12,15 @@ Here is his note:
 
 ## The code
 
-The code was copypasted as-is from Gordon's answer.
+The code was copypasted as-is from Gordon's answer and few adjustments were made.
 
 ## History
+
+v1.0.1 - Minor update
+
+New features:
+
+ - Added Hostname in mail's subject
 
 v1.0 - Initial commit from copypasted code
 
