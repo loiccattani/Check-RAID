@@ -1,6 +1,6 @@
 # Check-RAID
 
-This script was found on [ServerFault.com][1] after having asked about differences between hardware and software RAID Systems. One User, Gordon Davisson, added a good note about silent failures of sowftare RAIDs. A bad point raised earlier in the comments. 
+This script was found on [ServerFault.com][1] after having asked about differences between hardware and software RAID Systems. One user, Gordon Davisson, added a good note about silent failures of Apple's sowftare RAIDs on Mac OS X. A bad point raised earlier in the comments.
 
 Here is his note:
 
