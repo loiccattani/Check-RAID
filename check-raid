@@ -16,5 +16,5 @@
 ADMIN_EMAIL="user@example.com"
 
 if diskutil listraid | grep "^Status:" | grep -qv "Online$"; then
-    diskutil listraid | mail -s 'RAID problem detected' "$ADMIN_EMAIL"
+    diskutil listraid | mail -s "RAID problem detected on $(hostname)" "$ADMIN_EMAIL"
 fi
