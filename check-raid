@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# This script checks for any degraded/offline/failed/whatever software
+# RAIDs, and if any are found emails a note to an admin.  To use it,
+# replace the ADMIN_EMAIL value with your own email address, drop it in
+# /etc/periodic/daily, and change the owner to root.  This'll make it
+# run its check every morning at 3:15am.
+#
+# Warning: this script doesn't check anything other than software RAIDs
+# built with the Apple (i.e. Disk Utility) RAID tools.  It does not check
+# any hardware RAIDs (including Apple's RAID card), or even any third-party
+# software RAIDs.  If "diskutil listraid" doesn't list it, it's not going
+# to be checked.
+#
+
+ADMIN_EMAIL="user@example.com"
+
+if diskutil listraid | grep "^Status:" | grep -qv "Online$"; then
+    diskutil listraid | mail -s 'RAID problem detected' "$ADMIN_EMAIL"
+fi
