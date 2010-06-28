@@ -16,12 +16,16 @@ The code was copypasted as-is from Gordon's answer and few adjustments were made
 
 ## History
 
-v1.0.1 - Minor update
+### v1.0.2 - Minor update
 
-New features:
+New features:  
+ - Added log messages. Test running and error notification.
 
+### v1.0.1 - Minor update
+
+New features:  
  - Added Hostname in mail's subject
 
-v1.0 - Initial commit from copypasted code
+### v1.0 - Initial commit from copypasted code
 
 Feature basic check of Apple's software RAID system with mail notification to an admin.
