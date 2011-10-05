@@ -1,8 +1,8 @@
 # Check-RAID
 
-This script was found on [ServerFault.com][1] after having asked about differences between hardware and software RAID Systems. One user, Gordon Davisson, added a good note about silent failures of Apple's sowftare RAIDs on Mac OS X. A bad point raised earlier in the comments.
+This script was found on [ServerFault.com][1] after having asked about differences between hardware and software RAID Systems. One user, Gordon Davisson, added a nice contribution about silent failures of Apple's sofwtare RAIDs on Mac OS X. A bad point raised earlier in the comments.
 
-Here is his note:
+Here is his answer:
 
 > I'll second SvenW's warning about silent failures; if anything, it's a little too good at surviving a drive failure. I've seen the aftermath of a couple of servers that had one drive drop out of a software mirror for some reason (I suspect not coming ready in time after a reboot); everything works fine off the remaining drive until, several months later, something goes wrong with THAT drive -- and it switches back to the drive that glitched the first time, and the last few months have vanished.
 >
@@ -12,9 +12,27 @@ Here is his note:
 
 ## The code
 
-The code was copypasted as-is from Gordon's answer and few adjustments were made.
+The code was copied from Gordon's answer and few adjustments were made.
+
+## Credits
+
+Credits goes to [Gordon Davisson][2] for the original script.
+
+  [2]:http://serverfault.com/users/6621/gordon-davisson
+
+## Compatibility
+
+Mac OS X 10.6, 10.7: Version v1.0.3
+Mac OS X 10.5: Version v1.0.2
+Older: unkown
 
 ## History
+
+### v1.1 - Minor compatibility update
+
+As of Mac OS X 10.6, `diskutil listRAID` is a deprecated synonym for `diskutil appleRAID list`.
+
+Replaced that command for future use, dropping support for 10.5 systems. (Use v1.0.2 instead)
 
 ### v1.0.2 - Minor update
 

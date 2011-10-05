@@ -16,7 +16,7 @@
 ADMIN_EMAIL="user@example.com"
 
 echo "Checking software RAID"
-if diskutil listraid | grep "^Status:" | grep -qv "Online$"; then
+if diskutil appleRAID list | grep "^Status:" | grep -qv "Online$"; then
     echo "RAID problem detected!"
-    diskutil listraid | mail -s "RAID problem detected on $(hostname)" "$ADMIN_EMAIL"
+    diskutil appleRAID list | mail -s "RAID problem detected on $(hostname)" "$ADMIN_EMAIL"
 fi
